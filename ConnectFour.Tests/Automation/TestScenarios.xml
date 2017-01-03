@@ -1,0 +1,1022 @@
+﻿<?xml version="1.0" encoding="utf-8"  ?>
+<!-- 
+
+This file defines 9 scenarios to feed into the Connect Four application.
+
+    1. Yellow Wins - Horizontal
+    2. Red Wins - Vertical
+    3. Yellow Wins - Diagonal
+    4. Draw - Both players
+    5. Invalid Board Dimensions
+    6. Invalid Move
+    7. Red Wins - Horizontal
+    8. Yellow Wins - Vertical
+    9. Red Wins - Diagonal
+    
+Each scenario is read by the TestScenariosRunner (in order) and then executed as a unit test.
+
+The TestScenariosRunner will spawn an instance of our application (In a seperate process) and then feed the inputs and check the outputs.
+    
+-->
+<ConsoleTestScenarios>
+
+  <ConsoleTestScenario Name="Scenario One: Yellow Wins - Horizontal">
+
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5 5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y Y o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y Y o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y Y Y R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Yellow WINS!</ExpectStandardOutToPrint>
+  </ConsoleTestScenario>
+
+  <ConsoleTestScenario Name="Scenario Two: Red Wins - Vertical">
+
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5 5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Red WINS!</ExpectStandardOutToPrint>
+
+  </ConsoleTestScenario>
+
+  <ConsoleTestScenario Name="Scenario Three: Yellow Wins - Diagonal">
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5 5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R R o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o Y Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R R o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o Y Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R R R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o Y Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R R R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o Y Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R R R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o Y Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o Y Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R R R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o Y Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R R R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o Y Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R R R o</ExpectStandardOutToPrint>
+
+    <ExpectStandardOutToPrint>Yellow WINS!</ExpectStandardOutToPrint>
+  </ConsoleTestScenario>
+
+  <ConsoleTestScenario Name="Scenario Four: Draw - Both Players">
+
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5 5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y o Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y o Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y R Y Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R Y R Y</ExpectStandardOutToPrint>
+
+    <ExpectStandardOutToPrint>Draw!</ExpectStandardOutToPrint>
+
+  </ConsoleTestScenario>
+
+  <ConsoleTestScenario Name="Scenario Five: Invalid Board Dimensions">
+
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <!-- Negative first number -->
+    <WriteLineToStandardInput>-1 5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Invalid Dimensions - Please try again</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <!-- Negative second number -->
+    <WriteLineToStandardInput>5 -1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Invalid Dimensions - Please try again</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <!-- Three numbers -->
+    <WriteLineToStandardInput>5 5 5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Invalid Dimensions - Please try again</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <!-- Non-numbers -->
+    <WriteLineToStandardInput>5 a</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Invalid Dimensions - Please try again</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <!-- Correct dimensions -->
+    <WriteLineToStandardInput>5 5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y Y o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y Y o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y Y Y R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Yellow WINS!</ExpectStandardOutToPrint>
+  </ConsoleTestScenario>
+
+  <ConsoleTestScenario Name="Scenario Six: Invalid move">
+
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5 5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <!-- Column number is too low -->
+    <WriteLineToStandardInput>-1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Invalid Move</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <!-- Column number is too high -->
+    <WriteLineToStandardInput>999</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Invalid Move</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <!-- Column number is not a number -->
+    <WriteLineToStandardInput>b</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Unable to understand that input as a number</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <!-- Correct move -->
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y Y o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y Y o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y Y Y Y R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Yellow WINS!</ExpectStandardOutToPrint>
+  </ConsoleTestScenario>
+
+  <ConsoleTestScenario Name="Scenario Seven: Red Wins - Horizontal">
+
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5 5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o R R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o R R R</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o Y</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R R R R</ExpectStandardOutToPrint>
+
+    <ExpectStandardOutToPrint>Red WINS!</ExpectStandardOutToPrint>
+  </ConsoleTestScenario>
+
+  <ConsoleTestScenario Name="Scenario Eight: Yellow Wins - Vertical">
+
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5 5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Y R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>Yellow WINS!</ExpectStandardOutToPrint>
+  </ConsoleTestScenario>
+
+  <ConsoleTestScenario Name="Scenario Nine: Red Wins - Diagonal">
+    <ExpectStandardOutToPrint>> Please enter the board dimensions (number of rows, number of columns)</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>5 5</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>1</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>2</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o R o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o R Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>3</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o R o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o R Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o R o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o R Y o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y Y Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o R o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o R Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y Y Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Yellows Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o R Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o R Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y Y Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>> Reds Turn:</ExpectStandardOutToPrint>
+
+    <WriteLineToStandardInput>4</WriteLineToStandardInput>
+    <ExpectStandardOutToPrint StdInLine="true">> </ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o o o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o o R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o o R Y o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>o R Y R o</ExpectStandardOutToPrint>
+    <ExpectStandardOutToPrint>R Y Y Y o</ExpectStandardOutToPrint>
+
+    <ExpectStandardOutToPrint>Red WINS!</ExpectStandardOutToPrint>
+  </ConsoleTestScenario>
+
+</ConsoleTestScenarios>
