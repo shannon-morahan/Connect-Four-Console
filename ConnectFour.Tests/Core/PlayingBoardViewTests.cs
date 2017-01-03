@@ -1,4 +1,5 @@
-﻿using ConnectFour.Core;
+﻿using System;
+using ConnectFour.Core;
 using NUnit.Framework;
 
 namespace ConnectFour.Tests.Core
@@ -7,7 +8,7 @@ namespace ConnectFour.Tests.Core
     public class PlayingBoardViewTests
     {
         /// <summary>
-        /// Does an empty board render as expected?
+        /// Does an empty board render as expected? 
         /// </summary>
         [Test]
         public void PlayingBoardViewShowsCorrectEmptyBoard()
@@ -15,12 +16,12 @@ namespace ConnectFour.Tests.Core
             PlayingBoard board = new PlayingBoard(new Dimensions { Rows = 5, Columns = 6 });
             PlayingBoardView view = new PlayingBoardView(board);
             string result = view.RenderAsString();
-            string expected = @"o o o o o o 
-o o o o o o 
-o o o o o o 
-o o o o o o 
-o o o o o o 
-";
+            string expected = @"o o o o o o " + Environment.NewLine;
+            expected += "o o o o o o " + Environment.NewLine;
+            expected += "o o o o o o " + Environment.NewLine;
+            expected += "o o o o o o " + Environment.NewLine;
+            expected += "o o o o o o " + Environment.NewLine;
+
             Assert.AreEqual(result, expected);
         }
 
@@ -39,12 +40,12 @@ o o o o o o
             board.DropPieceIntoColumn(4);
 
             string result = view.RenderAsString();
-            string expected = @"o o o o o o 
-o o o o o o 
-o o o o o o 
-o o o o o o 
-Y R Y R Y o 
-";
+            string expected = @"o o o o o o " + Environment.NewLine;
+            expected += @"o o o o o o " + Environment.NewLine;
+            expected += @"o o o o o o " + Environment.NewLine;
+            expected += @"o o o o o o " + Environment.NewLine;
+            expected += @"Y R Y R Y o " + Environment.NewLine;
+
             Assert.AreEqual(result, expected);
         }
 
@@ -63,12 +64,13 @@ Y R Y R Y o
             board.DropPieceIntoColumn(0);
 
             string result = view.RenderAsString();
-            string expected = @"Y o o o o o 
-R o o o o o 
-Y o o o o o 
-R o o o o o 
-Y o o o o o 
-";
+            string expected = @"Y o o o o o " + Environment.NewLine;
+
+            expected += "R o o o o o " + Environment.NewLine;
+            expected += "Y o o o o o " + Environment.NewLine;
+            expected += "R o o o o o " + Environment.NewLine;
+            expected += "Y o o o o o " + Environment.NewLine;
+
             Assert.AreEqual(result, expected);
         }
     }
